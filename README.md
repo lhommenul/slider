@@ -1,10 +1,13 @@
-# SLIDER JS => like -> Glide, Swiper ... 
+# SLIDER JS
 ***
 Slider with no themes by default and only js childs accepted.
 
 ## How to start
 1. download the npm package : $ npm install --save-dev @lhommenul/slider
-2. import the script in your html before the </body> : <script src="/node_modules/@lhommenul/slider/slider.js"></script>
+2. import the script in your html before the </body> : 
+```js
+    <script src="/node_modules/@lhommenul/slider/slider.js"></script>
+```
 3. add this html where you want the slider to be :
  ```js 
     <ul class="list_cards_actu">

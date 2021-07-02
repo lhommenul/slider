@@ -9,6 +9,25 @@
   "author": "lhommenul",
   "license": "ISC",
   "devDependencies": {
-    "@lhommenul/slider": "^1.0.0"
-  }
+    "@lhommenul/slider": "^1.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhommenul/slider.git"
+  },
+  "keywords": [
+    "slider",
+    "slider_js",
+    "glide",
+    "swiper",
+    "carousel"
+  ],
+  "bugs": {
+    "url": "https://github.com/lhommenul/slider/issues"
+  },
+  "homepage": "https://github.com/lhommenul/slider#readme"
 }

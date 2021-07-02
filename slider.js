@@ -37,7 +37,6 @@ class Slider{
         let index_position = 0;
         // Je veux 4 pages donc 
         for (let index = 0; index < this.pages; index++) {
-            // PUSH une liste de 6 ELEMENTS
             (()=>{
                 let l = [];
                 for (let index = 0; index < this.per_pages; index++) {

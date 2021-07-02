@@ -43,12 +43,13 @@ class Slider{
                 for (let index = 0; index < this.per_pages; index++) {
                     const card = this.cards[index+index_position];
                     if (card != undefined) l.push(card);
-                    // console.log(card.data.message.length);
                 }
                 this.list.push(l)
             })();
-            index_position+=6;
+            console.log(this.pages);
+            index_position+=this.per_pages;
         }
+        console.log(this.list);
         // append cards
         this.list[this.start].forEach(e => {
             this.container_card_slider.appendChild(e);    

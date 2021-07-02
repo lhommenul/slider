@@ -85,7 +85,7 @@ class Slider{
                     [...i].forEach(p => { p.remove() });
                     this.start = this.start+1===this.pages?0:this.start+1;
                     this.list[posi?Number(ob.innerText)-1:this.start].forEach(e => {
-                        this.container_card_slider.appendChild(e.generateHtml())    
+                        this.container_card_slider.appendChild(e)    
                     });
                 },700)
             })

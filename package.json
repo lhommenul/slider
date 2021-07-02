@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lhommenul",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@lhommenul/slider": "^1.0.0"
+  }
 }

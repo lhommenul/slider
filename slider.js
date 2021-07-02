@@ -20,7 +20,7 @@
 
 */
 
-export default class Slider{
+class Slider{
     constructor(props){
         this.pages = 0;
         this.per_pages = props.per_pages;

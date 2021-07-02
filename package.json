@@ -1,6 +1,6 @@
 {
   "name": "@lhommenul/slider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "slider obj ",
   "main": "slider.js",
   "scripts": {

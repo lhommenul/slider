@@ -51,7 +51,7 @@ export default class Slider{
         }
         // append cards
         this.list[this.start].forEach(e => {
-            this.container_card_slider.appendChild(e.generateHtml())    
+            this.container_card_slider.appendChild(e);    
         });
         // generate btn
         (()=>{

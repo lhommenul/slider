@@ -39,26 +39,26 @@ class Slider{
         });
         // generate btn
         (()=>{
-            const c_cont = document.getElementsByClassName('control')[0]
-            let btn_left = document.createElement('button'),
-                btn_right = document.createElement('button');
-            btn_left.innerText = "<<"
-            btn_left.className = "move_slide left_slide"
+            const c_cont = document.getElementsByClassName('control')[0] // Container where to append the btn's
+            let btn_left = document.createElement('button'), // Create a btn to swipe left
+                btn_right = document.createElement('button'); // Create a btn to swipe right
+            btn_left.innerText = "<<" // Add default content to the btn
+            btn_left.className = "move_slide left_slide" // Add default class's
             btn_right.innerText = ">>"
             btn_right.className = "move_slide right_slide"
             // append
             c_cont.appendChild(btn_left)
                 this.list.forEach((o,index) => {
-                    let b = document.createElement('button')
-                    b.innerText = index+1;
-                    b.className = "move_slide dots"
+                    let b = document.createElement('button') // Creation of btn for the swipe 
+                    b.innerText = index+1; // Add defualt number's inside the btn representing the  page number
+                    b.className = "move_slide dots" 
                     c_cont.appendChild(b)
                 });
             c_cont.appendChild(btn_right)
         })();
         // Transi
         [...document.getElementsByClassName('move_slide')].forEach(ob=>{
-            ob.addEventListener('click',(btn_value)=>{
+            ob.addEventListener('click',()=>{
                 var style = document.createElement('style');
                 style.innerHTML = `
                     .change_state_perf{ min-height:${this.container_card_slider.clientHeight}px; } 

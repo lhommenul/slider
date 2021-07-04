@@ -7,7 +7,7 @@ Slider with no themes by default and only js childs accepted.
 ```shell
     npm install --save-dev @lhommenul/slider
 ```
-2. import the script in your html before the </body> : 
+2. import the script in your html before the `</body>` : 
 ```js
     <script src="/node_modules/@lhommenul/slider/slider.js"></script>
 ```

@@ -4,7 +4,7 @@
   "description": "slider obj ",
   "main": "slider.js",
   "sync": "true",
-  "private": "true",
+  "private": "false",
   "author": "lhommenul",
   "license": "ISC",
   "dependencies": {},

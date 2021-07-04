@@ -1,7 +1,4 @@
-
-
-
-
+let doc_lang = (document.getElementsByTagName('html')[0].getAttribute("lang")?.toLowerCase()??"en")!="fr"?false:true; // check the lang use in the doc by reading the lang attr => fr = true  , en = false
 class Slider{
     constructor(props){
         this.pages = 0;
@@ -42,17 +39,17 @@ class Slider{
                 btn_right = document.createElement('button'); // Create a btn to swipe right
             btn_left.innerText = "<<" // Add default content to the btn
             btn_left.className = "move_slide left_slide" // Add default class's
-            btn_left.setAttribute('aria-label', 'previous');
+            btn_left.setAttribute('aria-label', doc_lang?'précédent':'previous');
             btn_right.innerText = ">>"
             btn_right.className = "move_slide right_slide"
-            btn_right.setAttribute('aria-label', 'next');
+            btn_right.setAttribute('aria-label', doc_lang?'suivant':'next');
             // append
             c_cont.appendChild(btn_left)
                 this.list.forEach((o,index) => {
                     let b = document.createElement('button') // Creation of btn for the swipe 
                     b.innerText = index+1; // Add defualt number's inside the btn representing the  page number
                     b.className = "move_slide dots" 
-                    b.setAttribute('aria-label', `go to slide ${index+1}`);
+                    b.setAttribute('aria-label', doc_lang?`page du carousel numéro ${index+1}`:`go to slide ${index+1}`);
                     c_cont.appendChild(b)
                 });
             c_cont.appendChild(btn_right)
@@ -60,11 +57,6 @@ class Slider{
         // Transi
         [...document.getElementsByClassName('move_slide')].forEach(ob=>{
             ob.addEventListener('click',()=>{
-                var style = document.createElement('style');
-                style.innerHTML = `
-                    .change_state_perf{ min-height:${this.container_card_slider.clientHeight}px; } 
-                `;
-                document.head.appendChild(style);
                 this.container_card_slider.classList.add("change_state_perf");
                 let chil = this.container_card_slider,
                     posi = ob.classList.contains("dots"),

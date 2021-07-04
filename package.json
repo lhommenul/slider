@@ -3,14 +3,10 @@
   "version": "1.0.5",
   "description": "slider obj ",
   "main": "slider.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "sync": "true",
+  "private": "true",
   "author": "lhommenul",
   "license": "ISC",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {},
   "repository": {
     "type": "git",

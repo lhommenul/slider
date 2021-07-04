@@ -29,10 +29,8 @@ class Slider{
                 }
                 this.list.push(l)
             })();
-            console.log(this.pages);
             index_position+=this.per_pages;
         }
-        console.log(this.list);
         // append cards
         this.list[this.start].forEach(e => {
             this.container_card_slider.appendChild(e);    
@@ -44,14 +42,17 @@ class Slider{
                 btn_right = document.createElement('button'); // Create a btn to swipe right
             btn_left.innerText = "<<" // Add default content to the btn
             btn_left.className = "move_slide left_slide" // Add default class's
+            btn_left.setAttribute('aria-label', 'previous');
             btn_right.innerText = ">>"
             btn_right.className = "move_slide right_slide"
+            btn_right.setAttribute('aria-label', 'next');
             // append
             c_cont.appendChild(btn_left)
                 this.list.forEach((o,index) => {
                     let b = document.createElement('button') // Creation of btn for the swipe 
                     b.innerText = index+1; // Add defualt number's inside the btn representing the  page number
                     b.className = "move_slide dots" 
+                    b.setAttribute('aria-label', `go to slide ${index+1}`);
                     c_cont.appendChild(b)
                 });
             c_cont.appendChild(btn_right)
